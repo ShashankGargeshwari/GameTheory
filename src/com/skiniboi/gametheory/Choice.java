@@ -1,18 +1,19 @@
 package com.skiniboi.gametheory;
-import java.util.Comparator;
 
 public class Choice {
 	
 	// Holds a reference to the player that owns this choice
-	Player player;
+	public Player player;
 	
 	// Holds a human readable description of the choice being made
-	String description;
+	public String description;
 	
 	// Holds the index of the current choice in the outer player
-	int outerIndex;
+	public int outerIndex;
 	
-	// Constructor to set the Choice
+	// Constructors 
+	
+	// Fully Defined Constructor
 	public Choice(Player p, int i , String d)
 	{
 		player = p;
@@ -20,6 +21,13 @@ public class Choice {
 		description = d;
 	}
 	
+	// Default Constructor
+	public Choice()
+	{
+		player = null;
+		outerIndex = -1;
+		description = "Defalult Action";
+	}
 	// Display all the elements of the given choice in human readable form
 	void Display()
 	{
