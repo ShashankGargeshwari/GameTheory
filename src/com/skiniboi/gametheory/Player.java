@@ -1,5 +1,6 @@
 package com.skiniboi.gametheory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Player 
@@ -32,11 +33,13 @@ public class Player
 	
 	public Player clone()
 	{
-		List<Choice> temp = new List<Choice>() ; 
+		List<Choice> temp = new ArrayList() ; 
 		
 		for(Choice c : choices)
 			{
 				temp.add(c.clone());
 			}
+		
+		return new Player(temp, description , outerIndex);
 	}
 }
